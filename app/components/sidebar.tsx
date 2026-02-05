@@ -1,22 +1,49 @@
+"use client";
+
 import Link from "next/link";
-function Sidebar() {
-  const links = [
-    {name:"Home",path:"/home"},
-    {name:"Categories",path:"/home/categories"},
-    {name:"Frequent",path:"/home/frequent"},
-    {name:"Explore",path:"/home/explore"},
-    {name:"Add Bookmark",path:"/home/add-bookmark"},
-    {name:"Settings",path:"/home/settings"},
-];
+
+export default function Sidebar() {
   return (
-    <div className="w-55 bg-gray-800 text-white p-3 flex flex-col">
-      <img className="w-40 h-30 m-5"src={"https://media.licdn.com/dms/image/sync/v2/D5627AQGQWu7AJYltUQ/articleshare-shrink_800/B56ZvAgaPzJEAI-/0/1768461280618?e=2147483647&v=beta&t=hReyPCt3LiOd6D_ZpSEoSgjz_vH1UT2sMel49iHaJLg"}></img>
-      {links.map((link) => (
-        <Link key={link.name}href={link.path}className="p-2 rounded hover:bg-gray-700">
-          {link.name}
-        </Link>
-      ))}
+    <div className="w-56 bg-black-100 p-4">
+      <h2 className="font-bold mb-6">Bookmark App</h2>
+
+      <ul className="space-y-3">
+        <li>
+          <Link href="/home" className="block hover:underline">
+            Home
+          </Link>
+        </li>
+
+        <li>
+          <Link href="/home/categories" className="block hover:underline">
+            Categories
+          </Link>
+        </li>
+
+        <li>
+          <Link href="/home/frequent" className="block hover:underline">
+            Frequent
+          </Link>
+        </li>
+
+        <li>
+          <Link href="/home/explore" className="block hover:underline">
+            Explore
+          </Link>
+        </li>
+
+        <li>
+          <Link href="/home/add-bookmark" className="block hover:underline">
+            Add Bookmark
+          </Link>
+        </li>
+
+        <li>
+          <Link href="/home/settings" className="block hover:underline">
+            Settings
+          </Link>
+        </li>
+      </ul>
     </div>
   );
 }
-export default Sidebar;
