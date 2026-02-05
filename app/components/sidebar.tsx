@@ -10,7 +10,7 @@ function Sidebar() {
 ];
   return (
     <div className="w-55 bg-gray-800 text-white p-3 flex flex-col">
-      <img className="w-40 h-30 m-5"src={"https://img.utdstc.com/icon/7fb/e7c/7fbe7cf186bb807af7e5354f933fd89a63c8e83fa2e8a685dfa91274ccc72888:200"}></img>
+      <img className="w-40 h-30 m-5"src={"https://media.licdn.com/dms/image/sync/v2/D5627AQGQWu7AJYltUQ/articleshare-shrink_800/B56ZvAgaPzJEAI-/0/1768461280618?e=2147483647&v=beta&t=hReyPCt3LiOd6D_ZpSEoSgjz_vH1UT2sMel49iHaJLg"}></img>
       {links.map((link) => (
         <Link key={link.name}href={link.path}className="p-2 rounded hover:bg-gray-700">
           {link.name}
