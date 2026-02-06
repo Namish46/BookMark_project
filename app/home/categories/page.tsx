@@ -13,7 +13,6 @@ function CategoriesPage(){
         setLoading(false);
       });
   },[]);
-
   if (loading){
     return <p className="p-6">Loading categories...</p>;
   }

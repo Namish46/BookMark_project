@@ -18,7 +18,6 @@ export default function AddCategoryPage() {
   return (
     <div className="p-4">
       <h1 className="text-xl font-bold mb-4">Add New Category</h1>
-
       <div className="mb-4 flex flex-col gap-2">
         <input type="text" placeholder="Category Name" value={name} onChange={e=>setName(e.target.value)} className="border p-2 rounded"/>
         Colors:

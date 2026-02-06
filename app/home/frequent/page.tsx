@@ -1,5 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
+import { Star } from "lucide-react";
+
 type Product ={
   id: number;
   title: string;
@@ -13,7 +15,7 @@ export default function FrequentPage() {
   const [loading,setLoading] =useState(true);
 
   useEffect(()=>{
-    fetch("https://dummyjson.com/products?limit=12")
+    fetch("https://dummyjson.com/products")
       .then((res) => res.json())
       .then((data)=>{
         const sorted = data.products.sort(
@@ -37,8 +39,18 @@ export default function FrequentPage() {
           <div key={item.id} className="border rounded-lg p-4 bg-black shadow hover:shadow-md">
             <img src={item.thumbnail} alt={item.title} className="w-full h-40 object-cover rounded mb-2"/>
             <h2 className="font-semibold">{item.title}</h2>
-            <p className="text-sm text-white-600">{item.description.slice(0, 50)}</p>
-            <p className="mt-1 text-sm">{"⭐".repeat(Math.round(item.rating))}</p>
+            <p className="text-sm text-white-600">{item.description}</p>
+            <div className="flex mt-1">
+              {Array.from({ length: 5 }).map((_, i) => (
+                <Star
+                  key={i}
+                  size={16}
+                  className={`${
+                    i < Math.round(item.rating) ? "text-yellow-400" : "text-gray-500"
+                  }`}
+                />
+              ))}
+            </div>
           </div>
         ))}
       </div>

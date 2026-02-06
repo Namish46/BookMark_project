@@ -15,7 +15,7 @@ function ExplorePage(){
     fetch("https://dummyjson.com/products")
       .then((res)=>res.json())
       .then((data)=>{
-        const shuffled = data.products.sort(() => Math.random() - 0.5);
+        const shuffled = data.products.sort(() => Math.random()-0.5);
         setItems(shuffled);
         setLoading(false);
       });

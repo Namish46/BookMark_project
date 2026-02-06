@@ -5,13 +5,10 @@ import { useRouter } from "next/navigation"
 export default function AuthProvider({ children }: { children: React.ReactNode }) {
   const [loading, setLoading] = useState(true)
   const router = useRouter()
-
   useEffect(() => {
     const token = localStorage.getItem("token")
-
-    // allow login page without token
     if (window.location.pathname !== "/" && !token) {
-      router.push("/") // redirect to login
+      router.push("/")
     } else {
       setLoading(false)
     }

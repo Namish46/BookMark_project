@@ -4,9 +4,8 @@ import { useRouter } from "next/navigation";
 type Category = {
   slug: string;
   name: string;
-  url?: string;
 };
-function ExplorePage(){
+function CategorizeId(){
   const [categories,setCategories] =useState<Category[]>([]);
   const [selected,setSelected] =useState<string | null>(null);
   const router=useRouter();
@@ -37,4 +36,4 @@ function ExplorePage(){
     </div>
   );
 }
-export default ExplorePage;
+export default CategorizeId;
