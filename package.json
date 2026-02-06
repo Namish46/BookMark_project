@@ -12,6 +12,7 @@
     "@tailwindcss/cli": "^4.1.18",
     "@tailwindcss/vite": "^4.1.18",
     "bootstrap": "^5.3.8",
+    "lucide-react": "^0.563.0",
     "next": "16.1.6",
     "react": "19.2.3",
     "react-bootstrap": "^2.10.10",
