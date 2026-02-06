@@ -17,7 +17,9 @@ export default function LoginPage() {
     const data = await res.json()
 
     if (res.ok) {
+      // Save token and user info to localStorage
       localStorage.setItem("token", data.accessToken)
+      localStorage.setItem("user", JSON.stringify(data))
       router.push("/home")
     } else {
       alert("Invalid username or password")

@@ -19,7 +19,11 @@ export default function Sidebar() {
             Categories
           </Link>
         </li>
-
+        <li>
+         <Link href="/home/categories/add-category" className="block hover:underline">
+            Add Category
+          </Link>
+          </li>
         <li>
           <Link href="/home/frequent" className="block hover:underline">
             Frequent
@@ -33,7 +37,7 @@ export default function Sidebar() {
         </li>
 
         <li>
-          <Link href="/home/add-bookmark" className="block hover:underline">
+          <Link href="/home/addBookmark" className="block hover:underline">
             Add Bookmark
           </Link>
         </li>
